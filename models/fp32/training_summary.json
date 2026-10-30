@@ -1,0 +1,66 @@
+{
+  "tensorflow_version": "2.15.1",
+  "seed": 42,
+  "gestures": [
+    "wing",
+    "ring",
+    "slope",
+    "negative"
+  ],
+  "input_scale": 0.001,
+  "input_note": "model input = accelerometer mg * input_scale, shape (1,128,3,1), gesture aligned to window end",
+  "split": {
+    "train": [
+      "hyw",
+      "shiyun",
+      "tangsy",
+      "dengyl",
+      "jiangyh",
+      "xunkai",
+      "negative3"
+    ],
+    "val": [
+      "pengxl",
+      "negative2",
+      "negative4"
+    ],
+    "test": [
+      "liucx",
+      "zhangxy",
+      "negative1",
+      "negative5"
+    ]
+  },
+  "split_sizes": {
+    "train": 434,
+    "val": 92,
+    "test": 155
+  },
+  "train_windows_after_augmentation": 12584,
+  "extra_train_negatives": {
+    "stream_crops": 1000,
+    "synthetic": 300
+  },
+  "epochs_run": 39,
+  "best_epoch": 19,
+  "params": 4300,
+  "metrics": {
+    "train": {
+      "loss": 0.009610242210328579,
+      "accuracy": 0.9972981810569763
+    },
+    "val": {
+      "loss": 0.32646796107292175,
+      "accuracy": 0.9130434989929199
+    },
+    "test": {
+      "loss": 0.35252100229263306,
+      "accuracy": 0.9096774458885193
+    }
+  },
+  "tflite": {
+    "bytes": 20668,
+    "test_accuracy": 0.9096774193548387,
+    "max_prob_diff_vs_keras": 1.7881393432617188e-07
+  }
+}

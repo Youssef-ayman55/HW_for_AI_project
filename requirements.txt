@@ -1,0 +1,9 @@
+# Python 3.9 (TF 2.15 / Keras 2 so tensorflow-model-optimization works for QAT)
+tensorflow==2.15.1
+tensorflow-model-optimization==0.7.5
+numpy<2
+pandas
+matplotlib
+scikit-learn
+ipykernel
+nbconvert
